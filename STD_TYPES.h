@@ -5,6 +5,32 @@
 /*********************************************************/
 #ifndef STD_TYPES_H
 #define STD_TYPES_H
+#define NULL_PTR          ((void *)0)
+
+#ifndef STD_ON
+#define STD_ON     0x01U /* Standard ON   */
+#endif
+#ifndef STD_OFF
+#define STD_OFF    0x00U /* Standard OFF  */
+#endif
+#ifndef STD_HIGH
+#define STD_HIGH   0x01U /* Standard HIGH */
+#endif
+#ifndef STD_LOW
+#define STD_LOW    0x00U /* Standard LOW  */
+#endif
+
+/*
+ * Boolean Values
+ */
+#ifndef FALSE
+#define FALSE (0u)
+#endif
+#ifndef TRUE
+#define TRUE (1u)
+#endif
+
+
 
 typedef unsigned char 			uint8_t; ;
 typedef unsigned short int		uint16_t;
