@@ -15,6 +15,7 @@ static uint8_t PWM_timer_count = 0;
 static uint8_t PWM_dutyCycle=0;
 
 void PWM_vidInit(void){
+    SetCallBack_Timer0OVF(PWM_vidstart);
     TIMER_vidTimer0Init();
     DIO_vidSetPinDirection(PWM_PORT1 , PWM_PIN1 , OUTPUT );
     DIO_vidSetPinDirection(PWM_PORT2 , PWM_PIN2 , OUTPUT );
