@@ -3,8 +3,8 @@
 /* Date     : 8/1/2022            */
 /* Version  : V01                 */
 /**********************************/
-#include "../STD_TYPES.h"
-#include "../BIT_MATH.h"
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
 #include "TimerRegs.h"
 #include "Timer.h"
 #include "TimerConfig.h"

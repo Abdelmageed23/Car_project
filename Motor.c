@@ -4,9 +4,15 @@
  * Created: 1/9/2022 5:56:57 PM
  *  Author: No. 01
  */ 
+
+
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "DIO_interface.h"
+#include "PWM.h"
 #include "Motor.h"
 #include "MOTOR_CONFIG.h"
-#include "DIO_interface.h"
+
 
 
 void MOTOR_init(uint8_t numMotor)// numMotor (initialize Direction pins only (PWM initializes enable pins inside them))
@@ -24,11 +30,11 @@ void MOTOR_init(uint8_t numMotor)// numMotor (initialize Direction pins only (PW
 	}
 }
 
-MOTOR_speed(uint8_t dutyCycle)//  30/60/90 (Start PWM and initialize duty cycle)
+void MOTOR_speed(uint8_t dutyCycle)//  30/60/90 (Start PWM and initialize duty cycle)
 {
 	PWM_SetDutyCycle(dutyCycle);
 }
-MOTOR_direction(uint8_t numMotor, uint8_t DIR)//  numMotor/(FWD,REV) (Set direction of specified motor) i.e (MOTOR_1, FWD) meaning motor 1, move forward
+void MOTOR_direction(uint8_t numMotor, uint8_t DIR)//  numMotor/(FWD,REV) (Set direction of specified motor) i.e (MOTOR_1, FWD) meaning motor 1, move forward
 {
 	if(MOTOR_1==numMotor)
 	{
@@ -57,9 +63,8 @@ MOTOR_direction(uint8_t numMotor, uint8_t DIR)//  numMotor/(FWD,REV) (Set direct
 		}
 	}
 	
-	
 }
-MOTOR_off(uint8_t numMotor)// stop specified motor (writes LOW on DIR data pins)
+void MOTOR_off(uint8_t numMotor)// stop specified motor (writes LOW on DIR data pins)
 {
 	if(MOTOR_1==numMotor)
 	{

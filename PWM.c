@@ -1,12 +1,20 @@
+/*
+ * Includes
+ *
+ * OUTPUTS/INPUTS not defined
+ */
+
+
+
 /**********************************/
 /* Author   : Abdalla Abdelhafiz  */
 /* Date     : 8/1/2022            */
 /* Version  : V01                 */
 /**********************************/
-#include "../STD_TYPES.h"
-#include "../BIT_MATH.h"
-#include "../TIMER/Timer.h"
-#include "../DIO/Dio.h"
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "DIO_interface.h"
+#include "Timer.h"
 #include "PWM.h"
 #include "PWMconfig.h"
 

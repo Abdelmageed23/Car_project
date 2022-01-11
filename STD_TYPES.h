@@ -48,4 +48,10 @@ typedef signed long int			sint32_t;
 typedef signed long long 		sint64_t;
 
 
+
+#define NULL 0
+#define Null_pointer 0
+#define OK 1
+#define NOK 0
+
 #endif
